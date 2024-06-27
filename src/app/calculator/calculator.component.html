@@ -1,0 +1,25 @@
+<!-- <p>calculator works!</p> -->
+
+
+<div class="calculator">
+    <div class="calculator__output">{{display}}</div>
+    <div class="calculator__keys">
+      <button (click) = "operate('+')" class="calculator__key calculator__key--operator">+</button>
+      <button (click) = "operate('-')" class="calculator__key calculator__key--operator">-</button>
+      <button (click) = "operate('*')" class="calculator__key calculator__key--operator">&times;</button>
+      <button (click) = "operate('/')" class="calculator__key calculator__key--operator">÷</button>
+      <button (click) = "addnumber('7')" class="calculator__key">7</button>
+      <button (click) = "addnumber('8')" class="calculator__key">8</button>
+      <button (click) = "addnumber('9')" class="calculator__key">9</button>
+      <button (click) = "addnumber('4')" class="calculator__key">4</button>
+      <button (click) = "addnumber('5')" class="calculator__key">5</button>
+      <button (click) = "addnumber('6')" class="calculator__key">6</button>
+      <button (click) = "addnumber('1')" class="calculator__key">1</button>
+      <button (click) = "addnumber('2')" class="calculator__key">2</button>
+      <button (click) = "addnumber('3')" class="calculator__key">3</button>
+      <button (click) = "addnumber('0')" class="calculator__key">0</button>
+      <button (click) = "addnumber('.')" class="calculator__key">.</button>
+      <button class="calculator__key">AC</button>
+      <button (click) = "evaluate()" class="calculator__key calculator__key--enter">=</button>
+    </div>
+  </div>
