@@ -107,10 +107,11 @@ export class CalculatorComponent {
     if (this.invalidexpression) return;
     switch(this.state) {
       case 1:
-        this.state = 2;
+        this.state = 1;
         this.displayarr = [];
         this.displayarr2 = [];
-        this.display = this.displayarr.join("");
+        // this.display = this.displayarr.join("");
+        this.display = '0';
         break;
       case 2:
         this.state = 5;
@@ -120,10 +121,26 @@ export class CalculatorComponent {
       case 3:
         this.state = 5;
         this.displayarr2 = Object.assign([],this.displayarr);
+        try {
+          this.display = eval(this.displayarr.join("")+this.operator+this.displayarr2.join(""));
+        } catch(error) {
+          this.display = "Invalid Expression";
+        }
         break;
       case 4:
+        this.state = 5;
+        try {
+          this.display = eval(this.displayarr.join("")+this.operator+this.displayarr2.join(""));
+        } catch(error) {
+          this.display = "Invalid Expression";
+        }
         break;
       case 5:
+        try {
+          this.display = eval(this.display+this.operator+this.displayarr2.join(""));
+        } catch(error) {
+          this.display = "Invalid Expression";
+        }
         break;
       
     }
