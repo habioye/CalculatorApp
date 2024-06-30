@@ -152,6 +152,16 @@ export class CalculatorComponent {
 
   }
 
+  allClear(): void {
+    this.state = 1;
+    this.display = '0';
+    this.displayarr = [];
+    this.displayarr2 = [];
+    
+
+    
+  }
+
   
 
 }
